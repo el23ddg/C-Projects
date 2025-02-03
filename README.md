@@ -22,4 +22,10 @@ Books are stored in books.txt, ensuring data persistence.
 #### 🔒 Admin Authentication
 - Username: admin
 - Password: password
+#### Why is temp.txt needed?
+##### In Library Management System in C, temp.txt is created as a temporary file to facilitate updating or deleting records in books.txt.
+Files in C do not support direct modification (like updating a specific line). To update or remove a book, we need to:
+- Read books.txt line by line and copy its content to temp.txt, while applying changes.
+- Skip the book to be removed (for delete) or modify the book details (for update).
+- Replace the original file (books.txt) with temp.txt, effectively applying the changes.
 #### Give a ⭐ if you like this project! 🚀
